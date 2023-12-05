@@ -1,0 +1,38 @@
+<% layout('layouts/boilerplate')%>
+    <div class="row" >
+        <h1 class="text-center">New Campground</h1>
+        <div class="col-6 offset-3">
+            <form action="/campgrounds" method="POST"  class= 'validated-form' enctype="multipart/form-data"> 
+                <div class="mb-3">
+                    <label class="form-label " for="title">Title</label>
+                    <input class="form-control" type="text" placeholder="title" name="campground[title]" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">location</label>
+                    <input class="form-control" type="text" placeholder="place" name="campground[location]" required>                                      
+                </div>                                      
+                <div class="mb-3">
+                    <label class="form-label">Image</label>
+                    <input class="form-control" type="file" placeholder="image" name="image" multiple required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="Price">Campground-price</label>
+                    <div class="input-group">
+                        <span class="input-group-text" price="">$</span>
+                    <input class="form-control" type="text" placeholder="price" name="campground[price]" required >
+                </div>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <label class="form-label" >description</label>
+                    <textarea class="form-control" type="text" placeholder="description" name="campground[description]" required ></textarea>
+                </div>
+
+                  <button class="mb-3 btn btn-success">Add Campgrounds</button>
+            </form> 
+            <a href="/campgrounds">All Campgrounds</a>
+    
+        </div>
+    </div>
+    
